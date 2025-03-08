@@ -14,7 +14,6 @@ public class AldeamoController {
     public AldeamoController(AldeamoService aldeamoService) {
         this.aldeamoService = aldeamoService;
     }
-
     @PostMapping
     public ResponseEntity<NotificacionResponse> enviarNotificacion(@RequestBody NotificacionRequest request) {
         NotificacionResponse response = aldeamoService.procesarNotificacion(request);
